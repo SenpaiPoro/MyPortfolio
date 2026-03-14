@@ -1,3 +1,13 @@
+<?php
+require '../config/function.php';
+
+if (isset($_SESSION['username'])){
+    header('Location: ../Portfolio/index.php ');
+    exit();
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,23 +53,26 @@
                         <div class="p-5 w-100">
 
                             <div class="text-center mb-4">
+
+                                    <?= alertMessage(); ?>
+
                                 <h1 class="h4 text-gray-900">Welcome Marlon!</h1>
                             </div>
 
-                            <form>
+                            <form action="../config/code.php" method="POST" class="user">
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user"
+                                    <input name="username" type="email" class="form-control form-control-user"
                                            placeholder="Enter Email Address...">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user"
+                                    <input name="password" type="password" class="form-control form-control-user"
                                            placeholder="Password">
                                 </div>
 
-                                <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                     Login
-                                </a>
+                                </button>
                             </form>
 
                         </div>

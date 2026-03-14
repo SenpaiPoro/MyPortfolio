@@ -1,3 +1,7 @@
+<?php
+require '../config/function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,60 +28,53 @@
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
+<div class="container d-flex align-items-center justify-content-center min-vh-100 p-1">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
+            <div class="card-body p-5">
                 <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
+               
+                    <div class="col-lg-15">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                        
+                                   <?= alertMessage(); ?>
+                                        
+                                <h1 class="h4 text-gray-9`00 mb-4"><b>Create an Account!</b></h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="../config/code.php" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
+                                        <input name="firstname" type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="First Name" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                        <input name="lastname" type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Last Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                        <input name="password" type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                        <input name="repeatpassword" type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password" required>
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" name="register" class="btn btn-primary btn-user btn-block">
                                     Register Account
-                                </a>
+                                </button>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
