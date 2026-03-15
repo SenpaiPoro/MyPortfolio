@@ -10,7 +10,11 @@ $email = validate($_POST['email']);
 $password = validate($_POST['password']);
 $repeatpassword = validate($_POST['repeatpassword']);
 
-if ($password == $repeatpassword){
+$sql = "SELECT * FROM user where username = '$email'";
+$result = $conn->query($sql) ;
+
+if($result->num_rows <= 0 ){
+    if ($password == $repeatpassword){
 
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -18,15 +22,17 @@ if ($password == $repeatpassword){
     VALUES ('$firstname','$lastname','$email','$password')";
 
     $result = mysqli_query($conn, $user);
-    if($result){
+       if($result){
         redirect('../Portfolio_Dashboard/login.php', 'Account Successfully Creted');
-    }else{
+       }else{
                 redirect('../Portfolio_Dashboard/register.php', 'Account failed to create');
 
-    }
-
-}else
+        }
+    }else
     redirect('../Portfolio_Dashboard/register.php', 'Password didn\'t match');
+}else{
+        redirect('../Portfolio_Dashboard/register.php', 'Username already Taken');
+    }
 
 }
 
