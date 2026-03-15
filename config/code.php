@@ -47,12 +47,12 @@ if($result->num_rows > 0 ){
         header('Location: ../Portfolio/index.php');
         exit();
     } else {
-    echo"<script> alert ('something went wrong'); </script>";
-     header('Location: ../Portfolio_Dashboard/login.php');
+    echo "<script>alert('Incorrect password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
+        exit();
     }
 }else{
-    echo"<script> alert ('incorrect username or password'); </script>";
-    header('Location: ../Portfolio_Dashboard/login.php');
+    echo "<script>alert('Incorrect ussername or password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
+    exit();
 
     }
 } 
