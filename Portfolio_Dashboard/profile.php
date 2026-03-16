@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Home Page Management
+                    Profile Managerment
                     <a href="ProgramEvent.php" class="btn btn-danger float-end"> Back </a> 
                 </h4>
             </div>
@@ -21,16 +21,36 @@
                 <input type="hidden" name="colleges" value="<?php echo $college?>">
 
                     <div class="mb-3">
-                        <label> Event Name</label>
+                        <label> Heading</label>
                         <input type="text" name="name" require class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label> Description</label>
+                        <label> Support</label>
+                        <input type="text" name="name" require class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label> Tagline</label>
+                        <input type="text" name="name" require class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label> Bio</label>
                         <textarea name="description" require class="form-control" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Event Image</label>
+                        <label for="formFile" class="form-label">Profile Picture</label>
                         <input class="form-control" type="file" name="image" id="fileInput" require>
+                    </div>
+                    <div class="mb-3">
+                        <label> Instagram</label>
+                        <input type="text" name="name" require class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label> Linkin</label>
+                        <input type="text" name="name" require class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label> Github</label>
+                        <input type="text" name="name" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="AddEvent" class="btn btn-primary">Add Event</button>
