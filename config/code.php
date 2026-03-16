@@ -77,8 +77,10 @@ if(isset($_POST['profile'])){
         $file_name = $_FILES['image']['name'];
         $file_temp = $_FILES['image']['tmp_name'];
         $folder = '../Profile/assets/'.$file_name;
-        
 
+        if(move_uploaded_file($file_temp, $folder)){
+            $profile = "UPDATE profile SET profile='$file_name' ";
+        }
     }
 
 
