@@ -1,10 +1,10 @@
 <?php
 require '../config/function.php';
 
-if (isset($_SESSION['username'])){
-    header('Location: ../Portfolio/index.php ');
-    exit();
-}
+// if (isset($_SESSION['username'])){
+//     header('Location: index.php ');
+//     exit();
+// }
 
 
 ?>
