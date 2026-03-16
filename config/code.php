@@ -64,7 +64,25 @@ if($result->num_rows > 0 ){
 } 
 
 
+if(isset($_POST['profile'])){
+    $support = validate($_POST['support']);
+    $tagline = validate($_POST['tagline']);
+    $bio = validate($_POST['bio']);
+    $profile = validate($_POST['support']);
+    $instagram = validate($_POST['instagram']);
+    $linkin = validate($_POST['linkin']);
+    $github = validate($_POST['github']);
 
+    if(isset($_POST['image']) && $_FILES['image']['error'] == 0){
+        $file_name = $_FILES['image']['name'];
+        $file_temp = $_FILES['image']['tmp_name'];
+        $folder = '../Profile/assets/'.$file_name;
+        
+
+    }
+
+
+}
 
 
 

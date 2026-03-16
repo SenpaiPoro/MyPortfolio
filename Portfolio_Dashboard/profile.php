@@ -26,15 +26,15 @@
                     </div>
                     <div class="mb-3">
                         <label> Support</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="support" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Tagline</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="tagline" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Bio</label>
-                        <textarea name="description" require class="form-control" rows="3"></textarea>
+                        <textarea name="bio" require class="form-control" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Profile Picture</label>
@@ -42,18 +42,18 @@
                     </div>
                     <div class="mb-3">
                         <label> Instagram</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="instagram" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Linkin</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="linkin" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Github</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="github" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="AddEvent" class="btn btn-primary">Add Event</button>
+                        <button type="submit" name="profile" class="btn btn-primary">Add Event</button>
                     </div>
                 </form>
 
