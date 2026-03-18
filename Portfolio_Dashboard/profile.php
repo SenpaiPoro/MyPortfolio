@@ -7,7 +7,6 @@
             <div class="card-header">
                 <h4>
                     Profile Managerment
-                    <a href="ProgramEvent.php" class="btn btn-danger float-end"> Back </a> 
                 </h4>
             </div>
             <div class="card-body">
@@ -53,7 +52,7 @@
                         <input type="text" name="github" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="profile" class="btn btn-primary">Add Event</button>
+                        <button type="submit" name="profile" class="btn btn-primary">Update Profile</button>
                     </div>
                 </form>
 

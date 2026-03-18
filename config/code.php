@@ -47,14 +47,17 @@ if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
 
-$sql = "SELECT * FROM user where username = '$username'";
-$result = $conn->query($sql) ;
+
+    $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
 if($result->num_rows > 0 ){
     $row = $result-> fetch_assoc();
     if(password_verify($password, $row['password'])){
         $_SESSION['username'] = $row['username'];
-        $id = $row['id'];
+        $_SESSION['id'] = $row['id'];
 
         header('Location: ../Portfolio_Dashboard/index.php');
         exit();
