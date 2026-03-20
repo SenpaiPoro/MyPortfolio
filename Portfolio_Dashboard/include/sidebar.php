@@ -7,7 +7,10 @@ if (session_status() == PHP_SESSION_NONE) {
   exit();
 }
 
-
+$username = $_SESSION['username'];
+$sql = "SELECT * FROM profile WHERE username = '$username' ";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
