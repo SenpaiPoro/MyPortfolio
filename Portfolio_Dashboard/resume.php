@@ -2,8 +2,7 @@
       
       
     <?php include ('include/sidebar.php'); ?>
-
-               <?php include ('include/topbar.php'); ?>
+    <?php include ('include/topbar.php'); ?>
 
         <div class="row"></div>
  <div class="col-md-12">
@@ -14,7 +13,6 @@
                 </h4>
             </div>
             <div class="card-body">
-                    
               
 
                 <form action="../config/code.php" method="POST" enctype="multipart/form-data">
@@ -62,7 +60,6 @@
 
             </div>
         </div>
-    </div>
     </div>
                     
 
