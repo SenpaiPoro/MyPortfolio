@@ -17,7 +17,8 @@
 
                 <div class="form-floating">
                 </div>
-                <input type="hidden" name="colleges" value="<?php echo $college?>">
+
+                    <input name="username" type="hidden" value="<?php echo $username; ?>">
 
                     <div class="mb-3">
                         <label> Heading</label>

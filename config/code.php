@@ -74,6 +74,7 @@ if($result->num_rows > 0 ){
 
 
 if(isset($_POST['profile'])){
+    $username = validate($_POST['username']);
     $support = validate($_POST['support']);
     $tagline = validate($_POST['tagline']);
     $bio = validate($_POST['bio']);
@@ -88,7 +89,7 @@ if(isset($_POST['profile'])){
         $folder = '../Profile/assets/'.$file_name;
 
         if(move_uploaded_file($file_temp, $folder)){
-            $profile = "UPDATE profile SET profile='$file_name' ";
+            $profile = "UPDATE profile SET profile='$file_name' WHERE username = '$username'";
         }
     }
 
