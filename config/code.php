@@ -90,6 +90,9 @@ if(isset($_POST['profile'])){
 
         if(move_uploaded_file($file_temp, $folder)){
             $profile = "UPDATE profile SET profile='$file_name' WHERE username = '$username'";
+            $result = mysqli_query($conn, $profile);
+        }else{
+            exit; 
         }
     }
 
