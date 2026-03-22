@@ -87,7 +87,7 @@ if(isset($_POST['profile'])){
     if(isset($_FILES['image']) && $_FILES['image']['error'] == 0){
         $file_name = $_FILES['image']['name'];
         $file_temp = $_FILES['image']['tmp_name'];
-        $folder = '../Profile/assets/'.$file_name;
+        $folder = __DIR__ . '/../Portfolio/assets/' . $file_name;
 
         if(move_uploaded_file($file_temp, $folder)){
             $profile = "UPDATE profile
@@ -102,6 +102,11 @@ if(isset($_POST['profile'])){
             github='$github' 
             WHERE username = '$username'";
             $result = mysqli_query($conn, $profile);
+            if($result){
+            echo "<script>alert('Profile Successfully Updated'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+            }else{
+            echo "<script>alert('Someting went wrong'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+            }
         }else{
             exit; 
         }
