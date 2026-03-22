@@ -103,9 +103,12 @@ if(isset($_POST['profile'])){
             WHERE username = '$username'";
             $result = mysqli_query($conn, $profile);
             if($result){
-            echo "<script>alert('Profile Successfully Updated'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+                echo"<script>alert('Profile Successfully Updated'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+                exit; 
+
             }else{
-            echo "<script>alert('Someting went wrong'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+                echo "<script>alert('Someting went wrong'); window.location.href='../Portfolio_Dashboard/Profile.php';</script>";
+                exit; 
             }
         }else{
             exit; 
