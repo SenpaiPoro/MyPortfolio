@@ -77,24 +77,38 @@ if(isset($_POST['profile'])){
     $username = validate($_POST['username']);
     $support = validate($_POST['support']);
     $tagline = validate($_POST['tagline']);
+    $heading = validate($_POST['heading']);
     $bio = validate($_POST['bio']);
     $profile = validate($_POST['support']);
     $instagram = validate($_POST['instagram']);
     $linkin = validate($_POST['linkin']);
     $github = validate($_POST['github']);
 
-    if(isset($_POST['image']) && $_FILES['image']['error'] == 0){
+    if(isset($_FILES['image']) && $_FILES['image']['error'] == 0){
         $file_name = $_FILES['image']['name'];
         $file_temp = $_FILES['image']['tmp_name'];
         $folder = '../Profile/assets/'.$file_name;
 
         if(move_uploaded_file($file_temp, $folder)){
-            $profile = "UPDATE profile SET profile='$file_name' WHERE username = '$username'";
+            $profile = "UPDATE profile
+            SET 
+            tagline='$tagline',
+            support='$support',
+            heading='$heading',
+            bio='$bio',
+            profile='$file_name',
+            ig_link='$instagram',
+            in_link='$linkin',
+            github='$github' 
+            WHERE username = '$username'";
             $result = mysqli_query($conn, $profile);
         }else{
             exit; 
         }
+    }else{
+            header('Location: ../Portfolio_Dashboard/profile.php');
     }
+
 
 
 }

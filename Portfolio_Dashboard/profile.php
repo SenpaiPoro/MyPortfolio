@@ -22,7 +22,7 @@
 
                     <div class="mb-3">
                         <label> Heading</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="heading" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Support</label>
