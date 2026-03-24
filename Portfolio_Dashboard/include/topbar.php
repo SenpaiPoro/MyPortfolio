@@ -178,7 +178,7 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $row['name'];?></span>
                                 <img class="img-profile rounded-circle"
                                     src="<?php 
-                                    if($row['profile' == null]){
+                                    if($row['profile'] == null){
                                         echo "img/undraw_profile.svg";
                                     }else{
                                         echo "../Portfolio/assets/".$row['profile'];
