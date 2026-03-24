@@ -117,8 +117,6 @@ if(isset($_POST['profile'])){
             header('Location: ../Portfolio_Dashboard/profile.php');
     }
 
-
-
 }
 
 
