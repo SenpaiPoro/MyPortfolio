@@ -140,7 +140,7 @@ $row = $result->fetch_assoc();
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="../Portfolio/index.php" target="blank">
+                <a class="nav-link" href="../Portfolio/index.php?id=<?=$username?>" target="blank">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Portfoio</span></a>
             </li>
