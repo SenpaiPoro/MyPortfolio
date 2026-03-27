@@ -8,6 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 $username = $_SESSION['username'];
+$id = $_SESSION['id'];
 $sql = "SELECT * FROM profile WHERE username = '$username' ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
@@ -140,7 +141,7 @@ $row = $result->fetch_assoc();
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="../Portfolio/index.php?id=<?=$username?>" target="blank">
+                <a class="nav-link" href="../Portfolio/index.php?id=<?=$id?>" target="blank">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Portfoio</span></a>
             </li>
