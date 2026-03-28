@@ -28,4 +28,19 @@ function alertMessage()
         unset($_SESSION['status']);
     }
 }
+
+function checkId($paramType){
+
+    if(isset($_GET[$paramType]))
+    {
+        if($_GET[$paramType] != null){
+            return $_GET[$paramType];
+        }else{
+            return 'Id Not Found';
+        }
+    }else{
+        return 'No Id Given';
+    }
+}
+
 ?>
