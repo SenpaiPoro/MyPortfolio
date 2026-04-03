@@ -19,8 +19,17 @@
 
                 <div class="form-floating">
                 </div>
-                <input type="hidden" name="colleges" value="<?php echo $college?>">
 
+                 <label>Type</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="experience">
+                                Experience
+                            </option>
+                            <option value="education">
+                                Education
+                            </option>
+                        </select>
+                        
                     <div class="mb-3">
                         <label> Heading</label>
                         <input type="text" name="name" require class="form-control"value="<?php echo $row['heading']?>">
