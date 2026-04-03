@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Profile Managerment
+                    Resume Managerment
                 </h4>
             </div>
             <div class="card-body">
@@ -21,7 +21,7 @@
                 </div>
 
                  <label>Type</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
                             <option value="experience">
                                 Experience
                             </option>
@@ -29,7 +29,7 @@
                                 Education
                             </option>
                         </select>
-                        
+
                     <div class="mb-3">
                         <label> Heading</label>
                         <input type="text" name="name" require class="form-control"value="<?php echo $row['heading']?>">
