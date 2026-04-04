@@ -1,11 +1,15 @@
-<?php include ('include/header.php'); ?>
+<?php include ('include/sidebar.php'); ?>
+<?php include ('include/topbar.php'); ?>
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4>
-                 <?php echo $college?> Alumni Lists
-                    <a href="add_alumni.php" class="btn btn-primary float-end"> Add Almuni </a>
+                <h4><b> Resume</b></h4>
+                  <br>
+                    <a href="add_alumni.php" class="btn btn-primary float-end"> Add Experience </a>
+                    <a href="add_alumni.php" class="btn btn-secondary float-end"> Add Education </a>
+
                 </h4> 
             </div>
         </div>

@@ -84,7 +84,7 @@ $row = $result->fetch_assoc();
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item active" href="profile.php">Profile</a>
-                        <a class="collapse-item" href="resume.php">Resume</a>
+                        <a class="collapse-item" href="resumelist.php">Resume</a>
                         <a class="collapse-item active" href="project.php">Projects</a>
                         <a class="collapse-item" href="contact.php">Contact</a>
                     </div>
