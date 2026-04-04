@@ -21,17 +21,15 @@
             </form>
             <form class="d-flex" role="search" method="GET">
             <div class="input-group input-group-sm mb-3">
-    <input class="form-control " type="search" name="search" placeholder="Search Username" aria-label="Search" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
-    <button  class="btn btn-primary" type="submit">Search</button>
 </div>
 </form>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Colleges</th>
-                        <th>Program</th>
-                        <th>Username</th>
-                        <th>Code</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
