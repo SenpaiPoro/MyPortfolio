@@ -43,14 +43,17 @@
                         foreach ($Data as $DataList) {
                 ?>
                               <tr>
-                                    <td> <?= htmlspecialchars($usersList['colleges']); ?></td>
-                                    <td> <?= htmlspecialchars($usersList['program']); ?></td>
-                                    <td> <?= htmlspecialchars($usersList['username']); ?></td>
-                                    <td> <?= htmlspecialchars($usersList['tempcode']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['type']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['title']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['address']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['description']); ?></td>
+                                    <td> <?= htmlspecialchars($DataList['year']); ?></td>
+                                    
                                 <td> 
-                                <a href="alumni_edit.php?id=<?= $usersList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
-                                <a href="../admin/user-delete.php?id=<?= $usersList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this User? ');">Delete</a>
-                                <a href="alumni_profile.php?id=<?= $usersList['id'];?>   "class="btn btn-info btn-sm">View</a>
+                                <a href="alumni_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
+                                <a href="../admin/user-delete.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this User? ');">Delete</a>
+                                <a href="alumni_profile.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View</a>
                             </td>
                     </tr>
                             <?php
