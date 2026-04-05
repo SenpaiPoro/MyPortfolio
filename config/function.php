@@ -43,4 +43,13 @@ function checkId($paramType){
     }
 }
 
+function GetResume($table){
+    global $conn;
+
+    $sql = "SELECT * FROM $table "; 
+
+    return mysqli_query($conn, $sql);
+
+
+}
 ?>

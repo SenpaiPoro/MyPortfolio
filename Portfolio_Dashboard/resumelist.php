@@ -35,16 +35,12 @@
                 </thead>
                 <tbody class="table-hover">
                 <?php
-                    $searchQuery = ""; // Initialize search query
-                    if (isset($_GET['search']) && !empty($_GET['search'])) {
-                        $searchQuery = trim($_GET['search']);
-                        $users = GetCollegeData("users", $college, $searchQuery);
-                    } else {
-                        $users = GetCollegeData("users", $college);
-                    }
 
-                    if (mysqli_num_rows($users) > 0) {
-                        foreach ($users as $usersList) {
+                        $Data = GetResume("resume");
+                    
+
+                    if (mysqli_num_rows($Data) > 0) {
+                        foreach ($Data as $DataList) {
                 ?>
                               <tr>
                                     <td> <?= htmlspecialchars($usersList['colleges']); ?></td>
