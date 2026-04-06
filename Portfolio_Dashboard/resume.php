@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Resume Managerment
+                    <b>Resume</b>
                 </h4>
             </div>
             <div class="card-body">
@@ -20,7 +20,7 @@
                 <div class="form-floating">
                 </div>
 
-                 <label>Type</label>
+                 <label>Type:    </label>
                         <select class="form-select form-select-lg mb-3" aria-label="Large select example">
                             <option value="experience">
                                 Experience
@@ -31,36 +31,24 @@
                         </select>
 
                     <div class="mb-3">
-                        <label> Heading</label>
+                        <label> Name of Company/School</label>
                         <input type="text" name="name" require class="form-control"value="<?php echo $row['heading']?>">
                     </div>
                     <div class="mb-3">
-                        <label> Support</label>
+                        <label> Title: </label>
                         <input type="text" name="support" require class="form-control" value="<?php echo $row['support']?>">
                     </div>
                     <div class="mb-3">
-                        <label> Tagline</label>
+                        <label> Address: </label>
                         <input type="text" name="tagline" require class="form-control" value="<?php echo $row['tagline']?>">
                     </div>
                     <div class="mb-3">
-                        <label> Bio</label>
+                        <label> Description: </label>
                         <textarea name="bio" require class="form-control" rows="3"></textarea value="<?php echo $row['bio']?>">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Profile Picture</label>
-                        <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $row['profile']?>">
-                    </div>
-                    <div class="mb-3">
-                        <label> Instagram</label>
+                        <label> Year: </label>
                         <input type="text" name="instagram" require class="form-control" value="<?php echo $row['ig_link']?>">
-                    </div>
-                    <div class="mb-3">
-                        <label> Linkin</label>
-                        <input type="text" name="linkin" require class="form-control" value="<?php echo $row['in_link']?>">
-                    </div>
-                    <div class="mb-3">
-                        <label> Github</label>
-                        <input type="text" name="github" require class="form-control" value="<?php echo $row['github']?>">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="profile" class="btn btn-primary">Update Profile</button>

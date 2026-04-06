@@ -5,19 +5,15 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4><b> Resume</b></h4>
+                <h4><b>Resume Management</b></h4>
                   <br>
-                    <a href="add_alumni.php" class="btn btn-primary float-end"> Add Experience </a>
-                    <a href="add_alumni.php" class="btn btn-secondary float-end"> Add Education </a>
-
+                    <a href="resume.php" class="btn btn-primary float-end"> Add Experience </a>
                 </h4> 
             </div>
         </div>
         <div class="card-body">
         <?= alertMessage(); ?>
         <form method="GET" action="">
-        <input type="hidden" id="Department-type" name="colleges" class="form-control" rows="2" value="<?php echo $college?>">
-
             </form>
             <form class="d-flex" role="search" method="GET">
             <div class="input-group input-group-sm mb-3">
