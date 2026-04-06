@@ -120,7 +120,25 @@ if(isset($_POST['profile'])){
 }
 
 
+if(isset($_POST['resume'])){
+    $type = validate($_POST['type']);
+    $name = validate($_POST['name']);
+    $title = validate($_POST['title']);
+    $address = validate($_POST['address']);
+    $description = validate($_POST['description']);
+    $year = validate($_POST['year']);
 
+    $resume = "INSERT INTO resume (type,name,title,address,description,year)
+    VALUES('$type','$name','$title','$address','$description','$year')"; 
+    $resumeresult = mysqli_query($conn, $resume);
+
+    if($resumeresult){
+        redirect('../Portfolio_Dashboard/resumelist.php', 'Successfully Added');
+    }
+    else
+        redirect('../Portfolio_Dashboard/resume.php', 'Something Went Wrong');
+
+}
 
 
 
