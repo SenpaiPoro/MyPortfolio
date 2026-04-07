@@ -10,10 +10,8 @@
             <div class="card-header">
                 <h4>
                     <b>Resume</b>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <b>Resume</b>
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
-                </div>
+                     <a href="resumelist.php" class="btn btn-danger float-end"> Back </a> 
+
                 </h4>
 
             </div>
