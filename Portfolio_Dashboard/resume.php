@@ -11,7 +11,6 @@
                 <h4>
                     <b>Resume</b>
                      <a href="resumelist.php" class="btn btn-danger float-end"> Back </a> 
-
                 </h4>
 
             </div>
