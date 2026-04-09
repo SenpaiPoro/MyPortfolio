@@ -47,9 +47,8 @@
                                     <td> <?= htmlspecialchars($DataList['year']); ?></td>
                                     
                                 <td> 
-                                <a href="alumni_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
+                                <a href="resume_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
                                 <a href="../admin/user-delete.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this User? ');">Delete</a>
-                                <a href="alumni_profile.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View</a>
                             </td>
                     </tr>
                             <?php
