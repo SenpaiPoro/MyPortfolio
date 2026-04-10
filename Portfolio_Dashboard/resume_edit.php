@@ -19,15 +19,7 @@
                 <div class="form-floating">
                 </div>
 
-                 <label>Type:</label>
-                        <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="type">
-                            <option value="Experience">
-                                Experience
-                            </option>
-                            <option value="Education">
-                                Education
-                            </option>
-                        </select>
+                 
                     <div class="mb-3">
                         <label> Name of Company/School</label>
                         <input type="text" name="name" require class="form-control">
