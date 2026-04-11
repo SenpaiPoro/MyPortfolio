@@ -12,6 +12,11 @@
 
             </div>
             <div class="card-body">
+                <?php
+                $paramResult = checkId('id');
+                $resume= "SELECT * FROM resume WHERE id = '$paramResult'" ;
+                
+                ?>
               
 
                 <form action="../config/code.php" method="POST" enctype="multipart/form-data">
