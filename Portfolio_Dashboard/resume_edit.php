@@ -28,7 +28,7 @@
                  
                     <div class="mb-3">
                         <label> Name of Company/School</label>
-                        <input type="text" name="name" require class="form-control">
+                        <input type="text" name="name" require class="form-control" value="<?php echo $resumevalue['name'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Title: </label>
@@ -36,15 +36,15 @@
                     </div>
                     <div class="mb-3">
                         <label> Address: </label>
-                        <input type="text" name="address" require class="form-control" >
+                        <input type="text" name="address" require class="form-control" value="<?php echo $resumevalue['address'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Description: </label>
-                        <textarea name="description" require class="form-control" rows="3"></textarea>
+                        <textarea name="description" require class="form-control" rows="3" value="<?php echo $resumevalue['description'];?>"><?php echo $resumevalue['description'];?></textarea>
                     </div>
                     <div class="mb-3">
                         <label> Year: </label>
-                        <input type="number" name="year" require class="form-control" >
+                        <input type="number" name="year" require class="form-control" value="<?php echo $resumevalue['year'];?>">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="Update" class="btn btn-primary">Update</button>
