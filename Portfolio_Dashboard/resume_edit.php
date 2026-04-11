@@ -14,8 +14,9 @@
             <div class="card-body">
                 <?php
                 $paramResult = checkId('id');
-                $resume= "SELECT * FROM resume WHERE id = '$paramResult'" ;
-                
+                $resume= "SELECT * FROM resume WHERE id = '$paramResult' LIMIT 1" ;
+                $results = $conn->query($sql);
+                $resume = $results->fetch_assoc();
                 ?>
               
 
@@ -31,7 +32,7 @@
                     </div>
                     <div class="mb-3">
                         <label> Title: </label>
-                        <input type="text" name="title" require class="form-control" >
+                        <input type="text" name="title" require class="form-control" value="<?php echo $resume['year'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Address: </label>
