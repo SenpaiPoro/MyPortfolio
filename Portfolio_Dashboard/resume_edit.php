@@ -15,8 +15,8 @@
                 <?php
                 $paramResult = checkId('id');
                 $resume= "SELECT * FROM resume WHERE id = '$paramResult' LIMIT 1" ;
-                $results = $conn->query($sql);
-                $resume = $results->fetch_assoc();
+                $results = $conn->query($resume);
+                $resumevalue = $results->fetch_assoc();
                 ?>
               
 
@@ -32,7 +32,7 @@
                     </div>
                     <div class="mb-3">
                         <label> Title: </label>
-                        <input type="text" name="title" require class="form-control" value="<?php echo $resume['year'];?>">
+                        <input type="text" name="title" require class="form-control" value="<?php echo $resumevalue['year'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Address: </label>
