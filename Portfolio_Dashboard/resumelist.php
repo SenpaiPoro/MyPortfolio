@@ -24,8 +24,10 @@
                     <tr>
                         <th>Type</th>
                         <th>Name</th>
+                        <th>title</th>
                         <th>Address</th>
                         <th>Description</th>
+                        <th>Year</th>
                         <th>Action</th>
                     </tr>
                 </thead>
