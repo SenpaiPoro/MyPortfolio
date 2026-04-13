@@ -52,4 +52,43 @@ function GetResume($table){
 
 
 }
+
+function getbyId($tablename,$userid){
+    global $conn;
+
+    $table = validate($tablename);
+    $id = validate($userid);
+
+    $query = "SELECT * FROM $table WHERE id = $id";
+    $result = mysqli_query($conn, $query);
+    
+    if($result)
+        {
+            if(mysqli_num_rows($result) == 1)
+            {
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $response = [
+                    'status' => 200,
+                    'data' => $row
+                ];
+                return $response;
+            }
+            else
+            {
+                $response = [
+                    'status' => 400,
+                    'message' => 'No Data Record'
+                ];
+                return $response;
+            }
+        }
+        else
+        {
+            $response = [
+                'status' => 500,
+                'message' => 'Something Went Wrong'
+            ];
+        }
+}
+
 ?>
