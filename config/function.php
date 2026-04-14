@@ -91,4 +91,16 @@ function getbyId($tablename,$userid){
         }
 }
 
+function deleteQuery($table, $id){
+ global $conn;
+
+    $table = validate($table);
+    $id = validate($id);
+
+    $query = 
+   "DELETE * FROM $table WHERE id = '$id'";
+    $result = mysqli_query($conn, $query);
+    return $result;
+}
+
 ?>

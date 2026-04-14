@@ -11,7 +11,7 @@ if(is_numeric($parameter_result))
 
      if($users['status'] == 200)
      {
-        $usersDeleted = deleteQuery('users',$usersId, $personalId);
+        $usersDeleted = deleteQuery('resume',$usersId);
 
         if($usersDeleted)
         {
