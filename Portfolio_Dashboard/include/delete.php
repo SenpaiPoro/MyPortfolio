@@ -15,23 +15,10 @@ if(is_numeric($parameter_result))
 
         if($usersDeleted)
         {
-            $query = 
-            "DELETE FROM resume WHERE id = $usersId";
-             $result = mysqli_query($conn, $query);
-            if($result){
-                if($level === 'superadmin'){
-                redirect('Home_Settings.php', 'Successfully Deleted');
+            redirect('../resumelist.php', 'Successfully Deleted');
                 }else{
-                    redirect('../dean/alumnilist.php', 'Successfully Deleted');
+                    redirect('../resume.php', 'Someting went wrong');
                 }
-         }else{
-                    redirect('Home_Settings.php', 'Something Went Wrong!');
-                }
-    }
-    else
-    {
-    redirect('Home_Settings.php', $parameter_result);
-    }
-}
+         }
 }
 ?>

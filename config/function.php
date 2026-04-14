@@ -98,7 +98,7 @@ function deleteQuery($table, $id){
     $id = validate($id);
 
     $query = 
-   "DELETE * FROM $table WHERE id = '$id'";
+    "DELETE FROM $table WHERE id = '$id'";    
     $result = mysqli_query($conn, $query);
     return $result;
 }
