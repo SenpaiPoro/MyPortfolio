@@ -142,7 +142,7 @@ if(isset($_POST['resume'])){
 
 
 
-if(isset($_POST['update'])){
+if(isset($_POST['Update'])){
     $id = validate($_POST['id']);
     $name = validate($_POST['name']);
     $title = validate($_POST['title']);
