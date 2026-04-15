@@ -27,6 +27,7 @@
 
                  
                     <div class="mb-3">
+                        <input type="hidden" name="id" require class="form-control" value="<?php echo $paramResult?>">                        
                         <label> Name of Company/School</label>
                         <input type="text" name="name" require class="form-control" value="<?php echo $resumevalue['name'];?>">
                     </div>

@@ -142,9 +142,29 @@ if(isset($_POST['resume'])){
 
 
 
+if(isset($_POST['update'])){
+    $id = validate($_POST['id']);
+    $name = validate($_POST['name']);
+    $title = validate($_POST['title']);
+    $address = validate($_POST['address']);
+    $description = validate($_POST['description']);
+    $year = validate($_POST['year']);
 
+    $sql = "UPDATE resume SET 
+    name='$name',
+    title='$title',
+    address='$address',
+    description='$description',
+    year='$year'
+    WHERE id='$id'";
 
-
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        redirect('../Portfolio_Dashboard/resumelist.php', 'Successfully Edited ');
+    }else{
+         redirect('../Portfolio_Dashboard/resumelist.php', 'Something went wrong with Editing ');
+    }
+}
 
 
 
