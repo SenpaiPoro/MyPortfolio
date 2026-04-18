@@ -43,7 +43,7 @@ function checkId($paramType){
     }
 }
 
-function GetResume($table){
+function Getdata($table){
     global $conn;
 
     $sql = "SELECT * FROM $table "; 
