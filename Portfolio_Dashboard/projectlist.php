@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h4><b>Project Management</b></h4>
                   <br>
-                    <a href="resume.php" class="btn btn-primary float-end"> Add Project </a>
+                    <a href="project.php" class="btn btn-primary float-end"> Add Project </a>
                 </h4> 
             </div>
         </div>

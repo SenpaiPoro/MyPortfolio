@@ -33,7 +33,7 @@
                         <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $row['profile'];?>">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="profile" class="btn btn-primary">Add Project</button>
+                        <button type="submit" name="project" class="btn btn-primary">Add Project</button>
                     </div>
                 </form>
 
