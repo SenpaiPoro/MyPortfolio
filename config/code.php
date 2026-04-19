@@ -169,7 +169,34 @@ if(isset($_POST['Update'])){
 
 
 if(isset($_POST['project'])){  
-    
+
+    $title = validate($_POST['title']);
+    $description = validate($_POST['description']);
+
+    if(isset($_FILES['image']) && $_FILES['photo']['error'] == 0){
+        $file_name = $_FILES['image']['name'];
+        $file_temp = $_FILES['image']['tmp_name'];
+        $folder = __DIR__ . '/../Portfolio/assets/projects/' . $file_name;
+
+        if(move_uploaded_file($file_temp, $folder)){
+
+            $projects =  "INSERT INTO project (title, description, photo)
+                VALUES('$title','$description','$file_name')";
+            $result = mysqli_query($conn, $projects);
+            if($result){
+                echo"<script>alert('Project Successfully Added'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";
+                exit; 
+
+            }else{
+                echo "<script>alert('Someting went wrong'); window.location.href=' ../Portfolio_Dashboard/projectlist.php';</script>";
+                exit; 
+            }
+        }else{
+            exit; 
+        }
+    }else{
+            header('Location: ../Portfolio_Dashboard/projectlist.php');
+    }
 
 
 

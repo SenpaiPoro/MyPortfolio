@@ -18,15 +18,14 @@
 
                 <div class="form-floating">
                 </div>
-                <input type="hidden" name="colleges" value="<?php echo $college?>">
 
                     <div class="mb-3">
-                        <label> Name</label>
-                        <input type="text" name="name" require class="form-control">
+                        <label> Title</label>
+                        <input type="text" name="title" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label> Description</label>
-                        <input type="text" name="support" require class="form-control">
+                        <input type="text" name="description" require class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label"><b>Project Image Highlight</b></label>
