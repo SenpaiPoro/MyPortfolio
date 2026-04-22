@@ -39,7 +39,7 @@
                                     <td> <?= htmlspecialchars($DataList['description']); ?></td>
                                     
                                 <td> 
-                                <a href="resume_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
+                                <a href="projectedit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
                                 <a href="include/deleteproject.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Project? ');">Delete</a>
                             </td>
                     </tr>

@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    <b>Edit Resume</b>
+                    <b>Edit Project</b>
                      <a href="resumelist.php" class="btn btn-danger float-end"> Back </a> 
                 </h4>
 
