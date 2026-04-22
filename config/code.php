@@ -202,7 +202,14 @@ if(isset($_POST['project'])){
 
 }
 
+if(isset($_POST['Updateproject'])){
+    
+    $title = validate($_POST['title']);
+    $description = validate($_POST['description']);
+    $photo = validate($_POST['photo']);
 
+    
+}
 
 
 

@@ -42,7 +42,7 @@
                         <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $projectvalue['photo'];?>">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="Update" class="btn btn-primary">Update</button>
+                        <button type="submit" name="Updateproject" class="btn btn-primary">Update</button>
                     </div>
                 </form>
 
