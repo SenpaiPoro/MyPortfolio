@@ -7,16 +7,16 @@
             <div class="card-header">
                 <h4>
                     <b>Edit Project</b>
-                     <a href="resumelist.php" class="btn btn-danger float-end"> Back </a> 
+                     <a href="projectlist.php" class="btn btn-danger float-end"> Back </a> 
                 </h4>
 
             </div>
             <div class="card-body">
                 <?php
                 $paramResult = checkId('id');
-                $resume= "SELECT * FROM resume WHERE id = '$paramResult' LIMIT 1" ;
-                $results = $conn->query($resume);
-                $resumevalue = $results->fetch_assoc();
+                $project= "SELECT * FROM project WHERE id = '$paramResult' LIMIT 1" ;
+                $results = $conn->query($project);
+                $projectvalue = $results->fetch_assoc();
                 ?>
               
 
@@ -28,24 +28,18 @@
                  
                     <div class="mb-3">
                         <input type="hidden" name="id" require class="form-control" value="<?php echo $paramResult?>">                        
-                        <label> Name of Company/School</label>
-                        <input type="text" name="name" require class="form-control" value="<?php echo $resumevalue['name'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Title: </label>
-                        <input type="text" name="title" require class="form-control" value="<?php echo $resumevalue['year'];?>">
-                    </div>
-                    <div class="mb-3">
-                        <label> Address: </label>
-                        <input type="text" name="address" require class="form-control" value="<?php echo $resumevalue['address'];?>">
+                        <input type="text" name="title" require class="form-control" value="<?php echo $projectvalue['title'];?>">
                     </div>
                     <div class="mb-3">
                         <label> Description: </label>
-                        <textarea name="description" require class="form-control" rows="3" value="<?php echo $resumevalue['description'];?>"><?php echo $resumevalue['description'];?></textarea>
+                        <textarea name="description" require class="form-control" rows="3" value="<?php echo $projectvalue['description'];?>"><?php echo $projectvalue['description'];?></textarea>
                     </div>
                     <div class="mb-3">
-                        <label> Year: </label>
-                        <input type="number" name="year" require class="form-control" value="<?php echo $resumevalue['year'];?>">
+                        <label for="formFile" class="form-label"><b>Profile Picture</b></label>
+                        <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $projectvalue['photo'];?>">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="Update" class="btn btn-primary">Update</button>

@@ -34,14 +34,14 @@
                 <tbody class="table-hover">
                 <?php
 
-                        $Data = GetResume("resume");
+                        $Data = Getdata("resume");
                     
 
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>
                               <tr>
-                                    <td> <?= htmlspecialchars($DataList['type']); ?></td>
+                                `    <td> <?= htmlspecialchars($DataList['type']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['name']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['title']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['address']); ?></td>
