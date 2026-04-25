@@ -229,7 +229,7 @@ if(isset($_POST['Updateproject'])){
                 exit; 
             }
         }else{
-            exit; 
+            exit;
         }
     }else{
             header('Location: ../Portfolio_Dashboard/projectlist.php');

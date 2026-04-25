@@ -31,6 +31,10 @@
                         <label for="formFile" class="form-label"><b>Project Image Highlight</b></label>
                         <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $row['profile'];?>">
                     </div>
+                    <div class="mb-3">
+                        <label> Link</label>
+                        <input type="text" name="link" require class="form-control">
+                    </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="project" class="btn btn-primary">Add Project</button>
                     </div>
