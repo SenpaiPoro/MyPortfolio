@@ -22,6 +22,7 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Description</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="table-hover">
@@ -41,6 +42,7 @@
                                 <td> 
                                 <a href="projectedit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
                                 <a href="include/deleteproject.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Project? ');">Delete</a>
+                                <a href="projectview.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View</a>
                             </td>
                     </tr>
                             <?php
