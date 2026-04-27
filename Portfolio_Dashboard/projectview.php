@@ -2,6 +2,13 @@
 <?php include ('include/sidebar.php'); ?>
 <?php include ('include/topbar.php'); ?>
 
+<?php
+        $paramResult = checkId('id');
+        $sql = "SELECT * FROM project WHERE id = '$paramResult'";
+        $results = $conn->query($sql);
+        $project = $results->fetch_assoc();
+
+?>
 <section class="py-5">
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
@@ -14,7 +21,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
-                                            <h2 class="fw-bolder text-dark-mode">Project Name 1</h2>
+                                            <h2 class="fw-bolder text-dark-mode"></h2>
                                             <p class="text-dark-mode">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
                                         </div>
                                         <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
