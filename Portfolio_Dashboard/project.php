@@ -20,6 +20,9 @@
                 </div>
 
                     <div class="mb-3">
+
+                     <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
+                    
                         <label> Title</label>
                         <input type="text" name="title" require class="form-control">
                     </div>

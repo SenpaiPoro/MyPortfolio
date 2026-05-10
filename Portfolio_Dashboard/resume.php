@@ -22,6 +22,8 @@
                 <div class="form-floating">
                 </div>
 
+                <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
+
                  <label>Type:</label>
                         <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="type">
                             <option value="Experience">

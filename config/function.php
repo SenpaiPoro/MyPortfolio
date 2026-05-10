@@ -43,10 +43,10 @@ function checkId($paramType){
     }
 }
 
-function Getdata($table){
+function Getdata($table, $user_id){
     global $conn;
 
-    $sql = "SELECT * FROM $table "; 
+    $sql = "SELECT * FROM $table where user_id = $user_id"; 
 
     return mysqli_query($conn, $sql);
 

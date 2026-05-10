@@ -34,7 +34,7 @@
                 <tbody class="table-hover">
                 <?php
 
-                        $Data = Getdata("resume");
+                        $Data = Getdata("resume", $id);
                     
 
                     if (mysqli_num_rows($Data) > 0) {

@@ -127,9 +127,10 @@ if(isset($_POST['resume'])){
     $address = validate($_POST['address']);
     $description = validate($_POST['description']);
     $year = validate($_POST['year']);
+    $user_id = validate($_POST['user_id']);
 
-    $resume = "INSERT INTO resume (type,name,title,address,description,year)
-    VALUES('$type','$name','$title','$address','$description','$year')"; 
+    $resume = "INSERT INTO resume (user_id, type,name,title,address,description,year)
+    VALUES('$user_id','$type','$name','$title','$address','$description','$year')"; 
     $resumeresult = mysqli_query($conn, $resume);
 
     if($resumeresult){
@@ -172,6 +173,7 @@ if(isset($_POST['project'])){
 
     $title = validate($_POST['title']);
     $description = validate($_POST['description']);
+    $user_id = validate($_POST['user_id']);
 
     if(isset($_FILES['image']) && $_FILES['photo']['error'] == 0){
         $file_name = $_FILES['image']['name'];
@@ -180,8 +182,8 @@ if(isset($_POST['project'])){
 
         if(move_uploaded_file($file_temp, $folder)){
 
-            $projects =  "INSERT INTO project (title, description, photo)
-                VALUES('$title','$description','$file_name')";
+            $projects =  "INSERT INTO project (user_id, title, description, photo)
+                VALUES('$user_id','$title','$description','$file_name')";
             $result = mysqli_query($conn, $projects);
             if($result){
                 echo"<script>alert('Project Successfully Added'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";

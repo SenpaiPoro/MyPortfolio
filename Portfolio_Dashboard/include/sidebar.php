@@ -7,8 +7,9 @@ if (session_status() == PHP_SESSION_NONE) {
   exit();
 }
 
+$username = $_SESSION['username'];
 $id = $_SESSION['id'];
-$sql = "SELECT * FROM profile WHERE id = $id ";
+$sql = "SELECT * FROM profile WHERE username = '$username' ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
