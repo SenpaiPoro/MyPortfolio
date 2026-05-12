@@ -86,7 +86,7 @@ $row = $result->fetch_assoc();
                         <a class="collapse-item active" href="profile.php">Profile</a>
                         <a class="collapse-item" href="resumelist.php">Resume</a>
                         <a class="collapse-item active" href="projectlist.php">Projects</a>
-                        <a class="collapse-item" href="contact.php">Contact</a>
+                        <a class="collapse-item" href="messages.php">Messages</a>
                     </div>
                 </div>
             </li>
