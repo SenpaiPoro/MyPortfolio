@@ -241,5 +241,23 @@ if(isset($_POST['Updateproject'])){
 }
 
 
+if(isset($_POST['SubmitMessage'])){
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']);
+    $tel = validate($_POST['tel']);
+    $message = validate($_POST['message']);
+
+    $resume = "INSERT INTO resume (user_id, type,name,title,address,description,year)
+    VALUES('$user_id','$type','$name','$title','$address','$description','$year')"; 
+    $resumeresult = mysqli_query($conn, $resume);
+
+    if($resumeresult){
+        redirect('../Portfolio_Dashboard/resumelist.php', 'Successfully Added');
+    }
+    else
+        redirect('../Portfolio_Dashboard/resume.php', 'Something Went Wrong');
+
+}
+
 
 ?>
