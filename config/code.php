@@ -246,16 +246,17 @@ if(isset($_POST['SubmitMessage'])){
     $email = validate($_POST['email']);
     $tel = validate($_POST['tel']);
     $message = validate($_POST['message']);
+    $user_id = validate($_POST['user_id']);
 
-    $resume = "INSERT INTO resume (user_id, type,name,title,address,description,year)
-    VALUES('$user_id','$type','$name','$title','$address','$description','$year')"; 
-    $resumeresult = mysqli_query($conn, $resume);
+    $textmessage = "INSERT INTO messages (name, email,phone,message)
+    VALUES('$name','$email','$tel','$message')"; 
+    $messageresult = mysqli_query($conn, $textmessage);
 
-    if($resumeresult){
-        redirect('../Portfolio_Dashboard/resumelist.php', 'Successfully Added');
+    if($messageresult){
+        header("Location: ../Portfolio/contact.php?id=" . $user_id);
     }
     else
-        redirect('../Portfolio_Dashboard/resume.php', 'Something Went Wrong');
+            header("Location: ../Portfolio/contact.php?id=" . $user_id);
 
 }
 
