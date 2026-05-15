@@ -240,7 +240,7 @@ if(isset($_POST['Updateproject'])){
     
 }
 
-
+//this is for contact
 if(isset($_POST['SubmitMessage'])){
     $name = validate($_POST['name']);
     $email = validate($_POST['email']);
