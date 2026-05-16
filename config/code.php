@@ -248,8 +248,8 @@ if(isset($_POST['SubmitMessage'])){
     $message = validate($_POST['message']);
     $user_id = validate($_POST['user_id']);
 
-    $textmessage = "INSERT INTO messages (name, email,phone,message)
-    VALUES('$name','$email','$tel','$message')"; 
+    $textmessage = "INSERT INTO messages (user_id,name, email,phone,message)
+    VALUES('$user_id','$name','$email','$tel','$message')"; 
     $messageresult = mysqli_query($conn, $textmessage);
 
     if($messageresult){
