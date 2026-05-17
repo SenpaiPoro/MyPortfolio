@@ -5,9 +5,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4><b>Messages</b></h4>
-                  <br>
-                    <a href="project.php" class="btn btn-primary float-end"> Add Project </a>
+                <h4 style="color: #000;"><b>Messages</b></h4>
                 </h4> 
             </div>
         </div>
@@ -41,7 +39,7 @@
                                     
                                 <td> 
                                 <a href="include/deleteproject.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Project? ');">Delete</a>
-                                <a href="projectview.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View Messages</a>
+                                <a href="MessageView.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View Messages</a>
                             </td>
                     </tr>
                             <?php
