@@ -1,8 +1,6 @@
 <?php include('include/sidebar.php')?>
 <?php include('include/topbar.php')?>
 
-
-
             <?php
                 $paramResult = checkId('id');
                 $message = "SELECT * FROM messages WHERE id = '$paramResult' LIMIT 1" ;
@@ -15,7 +13,6 @@
                 <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"><?php echo $value['name'];?></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p><?php echo $value['message'];?></p>
