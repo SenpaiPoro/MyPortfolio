@@ -38,8 +38,7 @@
                         <textarea name="description" require class="form-control" rows="3" value="<?php echo $projectvalue['description'];?>"><?php echo $projectvalue['description'];?></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label"><b>Profile Picture</b></label>
-                        <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $projectvalue['photo'];?>">
+                        <label for="formFile" class="form-label"><b>Landpage Picture</b></label>
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="Updateproject" class="btn btn-primary">Update</button>

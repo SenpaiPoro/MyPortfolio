@@ -206,21 +206,14 @@ if(isset($_POST['project'])){
 
 if(isset($_POST['Updateproject'])){
     
+
+    $id = validate($_POST['id']);
     $title = validate($_POST['title']);
     $description = validate($_POST['description']);
 
-    if(isset($_FILES['image']) && $_FILES['photo']['error'] == 0){
-        $file_name = $_FILES['image']['name'];
-        $file_temp = $_FILES['image']['tmp_name'];
-        $folder = __DIR__ . '/../Portfolio/assets/projects/' . $file_name;
-
-        if(move_uploaded_file($file_temp, $folder)){
-
-            $projects =  "UPDATE project SET 
+            $projects =  " UPDATE project SET 
             title ='$title', 
-            description = '$description',
-            photo = '$file_name'
-            ";
+            description = '$description' where id = '$id' ";
             $result = mysqli_query($conn, $projects);
             if($result){
                 echo"<script>alert('Project Successfully Updated'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";
@@ -230,15 +223,8 @@ if(isset($_POST['Updateproject'])){
                 echo "<script>alert('Someting went wrong'); window.location.href=' ../Portfolio_Dashboard/projectlist.php';</script>";
                 exit; 
             }
-        }else{
-            exit;
         }
-    }else{
-            header('Location: ../Portfolio_Dashboard/projectlist.php');
-    }
-
-    
-}
+        
 
 //this is for contact
 if(isset($_POST['SubmitMessage'])){
