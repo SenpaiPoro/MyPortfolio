@@ -48,11 +48,13 @@ $row = $result->fetch_assoc();
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon">
+                    <img src="img/Logo.png" class="img-fluid" alt="Logo" style="max-height:40px; background:none;">
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">MP Admin </div>
             </a>
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">

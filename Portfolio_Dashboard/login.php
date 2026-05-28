@@ -43,7 +43,7 @@ require '../config/function.php';
 
                     <!-- Image Side -->
                     <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
-                        <img src="../Portfolio/assets/MyPicture.png" 
+                        <img src="img/logo.png" 
                              class="img-fluid" 
                              style="max-height: 420px;">
                     </div>
@@ -56,7 +56,7 @@ require '../config/function.php';
 
                                     <?= alertMessage(); ?>
 
-                                <h1 class="h4 text-gray-900">Welcome Marlon!</h1>
+                                <h1 class="h4 text-gray-900">Welcome!</h1>
                             </div>
 
                             <form action="../config/code.php" method="POST" class="user">
