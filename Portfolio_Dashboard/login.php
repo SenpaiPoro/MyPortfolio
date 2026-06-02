@@ -36,9 +36,9 @@ require '../config/function.php';
 
 <div class="container d-flex align-items-center justify-content-center min-vh-100">
 
-    <div class="col-xl-8 col-lg-10 col-md-12">
+    <div class="col-xl-11 col-lg-12 col-md-14">
         <div class="card shadow-lg border-0">
-            <div class="card-body p-0">
+            <div class="card-body p-12">
                 <div class="row no-gutters">
 
                     <!-- Image Side -->
