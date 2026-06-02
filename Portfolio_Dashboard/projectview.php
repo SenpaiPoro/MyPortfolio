@@ -12,7 +12,21 @@
 <section class="py-5">
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Project view</span></h1>
+                        <h1 style="
+                            font-family: Neo-grotesque sans-serif;
+                            font-weight:700;
+                            margin-bottom:1rem;
+                            background:linear-gradient(90deg,#007bff,#00c6ff);
+                            background-clip:text;
+                            -webkit-background-clip:text;
+                            -webkit-text-fill-color:transparent;
+                            letter-spacing:1px;
+                        ">
+                            <?php echo $project['title'];?> 
+                            <span style="font-weight:300;color:#6c757d;">view</span>
+                        </h1>
+
+
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
