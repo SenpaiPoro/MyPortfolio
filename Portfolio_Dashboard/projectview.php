@@ -24,7 +24,9 @@
                                             <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
                                             <p class="text-dark-mode"><?php echo $project['description'];?></p>
                                         </div>
-                                        <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                                        <div class="col-lg-6 col-md-12 p-0">
+                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" alt="..." />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

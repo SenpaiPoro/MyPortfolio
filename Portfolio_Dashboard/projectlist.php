@@ -37,7 +37,7 @@
                               <tr>
                                     <td> <?= htmlspecialchars($DataList['id']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['title']); ?></td>
-                                    <td> <?= htmlspecialchars($DataList['description']); ?></td>
+                                    <td> <p class="d-inline-block text-truncate" style="max-width: 170px;"><?= htmlspecialchars($DataList['description']); ?></p></td>
                                     
                                 <td> 
                                 <a href="projectedit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
