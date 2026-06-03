@@ -9,7 +9,11 @@
         $project = $results->fetch_assoc();
 
 ?>
+
 <section class="py-5">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-primary me-md-2" type="button" href="add_project_description.php?id=<?php echo $project['id']; ?>">Add Project Description</a>
+</div>
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
                         <h1 style="
