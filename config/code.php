@@ -246,5 +246,35 @@ if(isset($_POST['SubmitMessage'])){
 
 }
 
+if (isset($_POST['project_feature'])){
+    $id = validate($_POST['id']);
+    $title = validate($_POST['title']);
+    $description = validate($_POST['description']);
 
+    if(isset($_FILES['image']) && $_FILES['image']['error'] == 0){
+        $file_name = $_FILES['image']['name'];
+        $file_temp = $_FILES['image']['tmp_name'];
+        $folder = __DIR__ . '/../Portfolio/assets/projects/' . $file_name;
+
+        if(move_uploaded_file($file_temp, $folder)){
+
+            $projects =  " UPDATE project SET 
+            title ='$title', 
+            description = '$description',
+            photo = '$file_name' where id = '$id' ";
+            $result = mysqli_query($conn, $projects);
+            if($result){
+                echo"<script>alert('Project Successfully Updated'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";
+                exit; 
+
+            }else{
+                echo "<script>alert('Someting went wrong'); window.location.href=' ../Portfolio_Dashboard/projectlist.php';</script>";
+                exit; 
+            }
+        }else{
+            exit; 
+        }
+    }
+
+}
 ?>

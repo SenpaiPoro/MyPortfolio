@@ -37,7 +37,7 @@
                         <input type="text" name="link" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="project" class="btn btn-primary">Add Project</button>
+                        <button type="submit" name="project_feature" class="btn btn-primary">Add Project</button>
                     </div>
                 </form>
 
