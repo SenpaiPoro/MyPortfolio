@@ -1,13 +1,19 @@
       <?php include ('include/sidebar.php'); ?>
       <?php include ('include/topbar.php'); ?>
 
+      <?php
+        $paramResult = checkId('id');
+        $sql = "SELECT * FROM project WHERE id = '$paramResult'";
+        $results = $conn->query($sql);
+        $row = $results->fetch_assoc();
+        ?>
 
  <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Project Managerment
+                    <?php echo $row['title'];?> Description
                 </h4>
             </div>
             <div class="card-body">
@@ -17,11 +23,11 @@
                 <div class="form-floating">
                 </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3"> 
 
                      <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
                     
-                        <label> Title</label>
+                        <label> Page Title</label>
                         <input type="text" name="title" require class="form-control">
                     </div>
                     <div class="mb-3">
@@ -30,11 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label"><b>Project Image Highlight</b></label>
-                        <input class="form-control" type="file" name="image" id="fileInput" require value="<?php echo $row['profile'];?>">
-                    </div>
-                    <div class="mb-3">
-                        <label> Link</label>
-                        <input type="text" name="link" require class="form-control">
+                        <input class="form-control" type="file" name="image" id="fileInput" require accept="image/*">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="project_feature" class="btn btn-primary">Add Project</button>
