@@ -39,7 +39,7 @@
                         <input class="form-control" type="file" name="image" id="fileInput" require accept="image/*">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="project_feature" class="btn btn-primary">Add Project</button>
+                        <button type="submit" name="project_feature" class="btn btn-primary">Add Project Feature</button>
                     </div>
                 </form>
 
