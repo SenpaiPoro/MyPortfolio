@@ -258,10 +258,8 @@ if (isset($_POST['project_feature'])){
 
         if(move_uploaded_file($file_temp, $folder)){
 
-            $projects =  " UPDATE project SET 
-            title ='$title', 
-            description = '$description',
-            photo = '$file_name' where id = '$id' ";
+            $projects =  "INSERT INTO project_img (project_id, title,img, img_description)
+                VALUES('$id','$title','$file_name','$description')";
             $result = mysqli_query($conn, $projects);
             if($result){
                 echo"<script>alert('Project Successfully Updated'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";
