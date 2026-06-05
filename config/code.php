@@ -258,7 +258,7 @@ if (isset($_POST['project_feature'])){
 
         if(move_uploaded_file($file_temp, $folder)){
 
-            $projects =  "INSERT INTO project_img (project_id, title,img, img_description)
+            $projects =  "INSERT INTO project_img (user_id, title,img, img_description)
                 VALUES('$id','$title','$file_name','$description')";
             $result = mysqli_query($conn, $projects);
             if($result){

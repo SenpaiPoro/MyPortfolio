@@ -14,6 +14,8 @@
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <a class="btn btn-primary me-md-2" type="button" href="add_project_description.php?id=<?php echo $project['id']; ?>">Add Project Description</a>
 </div>
+            
+
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
                         <h1 style="
@@ -29,6 +31,13 @@
                             <?php echo $project['title'];?> 
                             <span style="font-weight:300;color:#6c757d;">view</span>
                         </h1>
+                    <?php
+                    $Data = Getdata("project_img", $paramResult);
+                    
+
+                    if (mysqli_num_rows($Data) > 0) {
+                        foreach ($Data as $DataList) {
+                ?>
 
 
                     </div>
@@ -40,7 +49,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
                                             <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
-                                            <p class="text-dark-mode"><?php echo $project['description'];?></p>
+                                            <p class="text-dark-mode"><?php echo $project['img_description'];?></p>
                                         </div>
                                         <div class="col-lg-6 col-md-12 p-0">
                                             <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" alt="..." />
@@ -52,6 +61,20 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                        }
+                    }
+                    else
+                    {
+                        ?>
+                            <tr>
+                                <td colspan="4">
+                                    No Record!
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                  ?>
             </section>
 
 
