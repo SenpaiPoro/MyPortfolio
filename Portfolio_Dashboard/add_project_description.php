@@ -32,7 +32,7 @@
                     </div>
                     <div class="mb-3">
                         <label> Description</label>
-                        <input type="text" name="description" require class="form-control">
+                        <textarea type="text" name="description" require class="form-control"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label"><b>Project Image Highlight</b></label>
