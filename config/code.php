@@ -247,7 +247,7 @@ if(isset($_POST['SubmitMessage'])){
 }
 
 if (isset($_POST['project_feature'])){
-    $id = validate($_POST['id']);
+    $id = validate($_POST['user_id']);
     $title = validate($_POST['title']);
     $description = validate($_POST['description']);
 

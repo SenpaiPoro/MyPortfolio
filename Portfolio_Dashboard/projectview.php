@@ -48,11 +48,11 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
-                                            <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
-                                            <p class="text-dark-mode"><?php echo $project['img_description'];?></p>
+                                            <h2 class="fw-bolder text-dark-mode"><?php echo $DataList['title'];?></h2>
+                                            <p class="text-dark-mode"><?php echo $DataList['img_description'];?></p>
                                         </div>
                                         <div class="col-lg-6 col-md-12 p-0">
-                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" alt="..." />
+                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $DataList['img']; ?>" alt="..." />
                                         </div>
                                     </div>
                                 </div>
