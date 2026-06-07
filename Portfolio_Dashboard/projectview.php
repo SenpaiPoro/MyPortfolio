@@ -16,7 +16,7 @@
 </div>
             
 
-                <div class="container px-5 mb-5">
+                < class="container px-5 mb-5">
                     <div class="text-center mb-5">
                         <h1 style="
                             font-family: Neo-grotesque sans-serif;
@@ -33,27 +33,28 @@
                         </h1>
 
 
-                </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
-                                            <p class="text-dark-mode"><?php echo $project['description'];?></p>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 p-0">
-                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" alt="..." />
-                                        </div>
-                                    </div>
+                    <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-0">
+                            <div class="row g-0 align-items-stretch">
+
+                            <!-- Text -->
+                            <div class="col-md-6 d-flex flex-column">
+                                <div class="p-5 flex-grow-1">
+                                <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
+                                <p class="text-dark-mode"><?php echo $project['description'];?></p>
                                 </div>
                             </div>
-                           
+
+                            <!-- Image -->
+                            <div class="col-md-6 p-0">
+                                <img class="img-fluid w-100 h-100 object-fit-cover"
+                                    src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" 
+                                    alt="..." />
+                            </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
 
@@ -65,28 +66,28 @@
                         foreach ($Data as $DataList) {
                 ?>
 
+                   <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-0">
+                            <div class="row g-0 align-items-stretch">
 
-                </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder text-dark-mode"><?php echo $DataList['title'];?></h2>
-                                            <p class="text-dark-mode"><?php echo $DataList['img_description'];?></p>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 p-0">
-                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $DataList['img']; ?>" alt="..." />
-                                        </div>
-                                    </div>
+                            <!-- Text -->
+                            <div class="col-md-6 d-flex flex-column">
+                                <div class="p-5 flex-grow-1">
+                                <h2 class="fw-bolder text-dark-mode"><?php echo $DataList['title'];?></h2>
+                                <p class="text-dark-mode"><?php echo $DataList['img_description'];?></p>
                                 </div>
                             </div>
-                           
+
+                            <!-- Image -->
+                            <div class="col-md-6 p-0">
+                                <img class="img-fluid w-100 h-100 object-fit-cover"
+                                    src="../Portfolio/assets/projects/<?php echo $DataList['img']; ?>" 
+                                    alt="..." />
+                            </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php
                         }
                     }
@@ -102,7 +103,6 @@
                     }
                   ?>
             </section>
-
 
 <script src="../admin/assets/js/script.js"></script>
 <?php include ('include/footer.php'); ?>

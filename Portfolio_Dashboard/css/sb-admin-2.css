@@ -2248,6 +2248,10 @@ textarea.form-control {
   box-shadow: 0 0 0 0.2rem rgba(231, 74, 59, 0.25);
 }
 
+.object-fit-cover {
+  object-fit: cover;
+}
+
 .form-inline {
   display: flex;
   flex-flow: row wrap;
