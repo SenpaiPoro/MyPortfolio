@@ -31,6 +31,32 @@
                             <?php echo $project['title'];?> 
                             <span style="font-weight:300;color:#6c757d;">view</span>
                         </h1>
+
+
+                </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <!-- Project Card 1-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
+                                            <p class="text-dark-mode"><?php echo $project['description'];?></p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 p-0">
+                                            <img  class="img-fluid" src="../Portfolio/assets/projects/<?php echo $project['photo']; ?>" alt="..." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+
                     <?php
                     $Data = Getdata("project_img", $paramResult);
                     
@@ -40,7 +66,7 @@
                 ?>
 
 
-                    </div>
+                </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <!-- Project Card 1-->
