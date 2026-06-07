@@ -16,7 +16,6 @@
 </div>
             
 
-                < class="container px-5 mb-5">
                     <div class="text-center mb-5">
                         <h1 style="
                             font-family: Neo-grotesque sans-serif;
