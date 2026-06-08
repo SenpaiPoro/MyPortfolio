@@ -39,14 +39,12 @@ if($result->num_rows <= 0 ){
 }else{
         redirect('../Portfolio_Dashboard/register.php', 'Username already Taken');
     }
-
 }
 
 
 if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
-
 
     $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
@@ -138,7 +136,6 @@ if(isset($_POST['resume'])){
     }
     else
         redirect('../Portfolio_Dashboard/resume.php', 'Something Went Wrong');
-
 }
 
 
@@ -199,13 +196,9 @@ if(isset($_POST['project'])){
     }else{
             header('Location: ../Portfolio_Dashboard/projectlist.php');
     }
-
-
-
 }
 
 if(isset($_POST['Updateproject'])){
-    
 
     $id = validate($_POST['id']);
     $title = validate($_POST['title']);
@@ -224,7 +217,6 @@ if(isset($_POST['Updateproject'])){
                 exit; 
             }
         }
-        
 
 //this is for contact
 if(isset($_POST['SubmitMessage'])){
@@ -273,6 +265,6 @@ if (isset($_POST['project_feature'])){
             exit; 
         }
     }
-
 }
+
 ?>
