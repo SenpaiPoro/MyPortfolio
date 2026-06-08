@@ -37,8 +37,16 @@
                             <!-- Text -->
                             <div class="col-md-6 d-flex flex-column">
                                 <div class="p-5 flex-grow-1">
-                                <h2 class="fw-bolder text-dark-mode"><?php echo $project['title'];?></h2>
-                                <p class="text-dark-mode"><?php echo $project['description'];?></p>
+                                <h2 style="
+                                    font-family: 'Oswald', sans-serif; 
+                                    font-weight: 700; 
+                                    color: #000; 
+                                    margin-bottom: 1rem;
+                                    letter-spacing: 1px;
+                                ">
+                                    <?php echo $project['title'];?>
+                                </h2>
+                                <p class="text-dark-mode" style="color: #000;"><?php echo $project['description'];?></p>
                                 </div>
                             </div>
 
@@ -70,8 +78,16 @@
                             <!-- Text -->
                             <div class="col-md-6 d-flex flex-column">
                                 <div class="p-5 flex-grow-1">
-                                <h2 class="fw-bolder text-dark-mode"><?php echo $DataList['title'];?></h2>
-                                <p class="text-dark-mode"><?php echo $DataList['img_description'];?></p>
+                                <h2 style="
+                                    font-family: 'Oswald', sans-serif; 
+                                    font-weight: 700; 
+                                    color: #000; 
+                                    margin-bottom: 1rem;
+                                    letter-spacing: 1px;
+                                ">
+                                    <?php echo $DataList['title'];?>
+                                </h2>
+                                <p class="text-dark-mode" style="color: #000;"><?php echo $DataList['img_description'];?></p>
                                 </div>
                             </div>
 
