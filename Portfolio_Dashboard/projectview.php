@@ -7,7 +7,6 @@
         $sql = "SELECT * FROM project WHERE id = '$paramResult'";
         $results = $conn->query($sql);
         $project = $results->fetch_assoc();
-
 ?>
 
 <section class="py-5">
@@ -15,20 +14,21 @@
   <a class="btn btn-primary me-md-2" type="button" href="add_project_description.php?id=<?php echo $project['id']; ?>">Add Project Description</a>
 </div>
                     <div class="text-center mb-5">
-                        <h1 style="
-                            font-family: Neo-grotesque sans-serif;
-                            font-weight:700;
-                            margin-bottom:1rem;
-                            background:linear-gradient(90deg,#007bff,#00c6ff);
-                            background-clip:text;
-                            -webkit-background-clip:text;
-                            -webkit-text-fill-color:transparent;
-                            letter-spacing:1px;
-                        ">
+                         <h2 style="
+                                    font-family: 'Oswald', sans-serif;
+                                    font-size: 2rem;
+                                    font-weight: 700;
+                                    margin-bottom: 1rem;
+                                    background: linear-gradient(90deg, #ff6a00, #ee0979);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                ">
                             <?php echo $project['title'];?> 
                             <span style="font-weight:300;color:#6c757d;">view</span>
                         </h1>
-
 
                     <div class="card h-100 overflow-hidden shadow rounded-4 border-0 mb-5">
                         <div class="card-body p-0">
@@ -38,11 +38,16 @@
                             <div class="col-md-6 d-flex flex-column">
                                 <div class="p-5 flex-grow-1">
                                 <h2 style="
-                                    font-family: 'Oswald', sans-serif; 
-                                    font-weight: 700; 
-                                    color: #000; 
+                                    font-family: 'Oswald', sans-serif;
+                                    font-size: 2rem;
+                                    font-weight: 700;
                                     margin-bottom: 1rem;
+                                    background: linear-gradient(90deg, #ff6a00, #ee0979);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
                                     letter-spacing: 1px;
+                                    text-transform: uppercase;
                                 ">
                                     <?php echo $project['title'];?>
                                 </h2>
@@ -61,11 +66,8 @@
                         </div>
                     </div>
 
-
-
                     <?php
                     $Data = Getdata("project_img", $paramResult);
-                    
 
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
@@ -79,12 +81,20 @@
                             <div class="col-md-6 d-flex flex-column">
                                 <div class="p-5 flex-grow-1">
                                 <h2 style="
-                                    font-family: 'Oswald', sans-serif; 
-                                    font-weight: 700; 
-                                    color: #000; 
+                                    font-family: 'Oswald', sans-serif;
+                                    font-size: 2rem;
+                                    font-weight: 700;
                                     margin-bottom: 1rem;
+                                    background: linear-gradient(90deg, #ff6a00, #ee0979);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
                                     letter-spacing: 1px;
+                                    text-transform: uppercase;
                                 ">
+                                    <?php echo $project['title']; ?>
+                                </h2>
+
                                     <?php echo $DataList['title'];?>
                                 </h2>
                                 <p class="text-dark-mode" style="color: #000;"><?php echo $DataList['img_description'];?></p>

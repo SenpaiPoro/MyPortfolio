@@ -1,7 +1,6 @@
 <?php
 require 'function.php';
 
-
 if(isset($_POST['register'])){
 $firstname = ucfirst(strtolower(validate($_POST['firstname'])));
 $lastname = ucfirst(strtolower(validate($_POST['lastname'])));
@@ -22,17 +21,14 @@ if($result->num_rows <= 0 ){
     VALUES ('$firstname','$lastname','$email','$password')";
     $result = mysqli_query($conn, $user);
 
-
     $profile = "INSERT INTO profile (username,name)
     VALUES ('$email','$name')";
     $profileresult = mysqli_query($conn, $profile);
-
 
        if($result && $profileresult){
         redirect('../Portfolio_Dashboard/login.php', 'Account Successfully Creted');
        }else{
                 redirect('../Portfolio_Dashboard/register.php', 'Account failed to create');
-
         }
     }else
     redirect('../Portfolio_Dashboard/register.php', 'Password didn\'t match');
@@ -40,7 +36,6 @@ if($result->num_rows <= 0 ){
         redirect('../Portfolio_Dashboard/register.php', 'Username already Taken');
     }
 }
-
 
 if(isset($_POST['login'])){
 $username = validate($_POST['username']);
@@ -69,7 +64,6 @@ if($result->num_rows > 0 ){
 
     }
 } 
-
 
 if(isset($_POST['profile'])){
     $username = validate($_POST['username']);
@@ -114,9 +108,7 @@ if(isset($_POST['profile'])){
     }else{
             header('Location: ../Portfolio_Dashboard/profile.php');
     }
-
 }
-
 
 if(isset($_POST['resume'])){
     $type = validate($_POST['type']);
@@ -137,8 +129,6 @@ if(isset($_POST['resume'])){
     else
         redirect('../Portfolio_Dashboard/resume.php', 'Something Went Wrong');
 }
-
-
 
 if(isset($_POST['Update'])){
     $id = validate($_POST['id']);
@@ -163,8 +153,6 @@ if(isset($_POST['Update'])){
          redirect('../Portfolio_Dashboard/resumelist.php', 'Something went wrong with Editing ');
     }
 }
-
-
 
 if(isset($_POST['project'])){  
 
@@ -235,7 +223,6 @@ if(isset($_POST['SubmitMessage'])){
     }
     else
             header("Location: ../Portfolio/contact.php?id=" . $user_id);
-
 }
 
 if (isset($_POST['project_feature'])){
