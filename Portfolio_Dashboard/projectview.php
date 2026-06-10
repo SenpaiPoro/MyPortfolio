@@ -92,7 +92,7 @@
                                     letter-spacing: 1px;
                                     text-transform: uppercase;
                                 ">
-                                    <?php echo $project['title']; ?>
+                                    <?php echo $DataList['title']; ?>
                                 </h2>
 
                                     <?php echo $DataList['title'];?>
