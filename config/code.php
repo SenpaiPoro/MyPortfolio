@@ -159,6 +159,7 @@ if(isset($_POST['project'])){
     $title = validate($_POST['title']);
     $description = validate($_POST['description']);
     $user_id = validate($_POST['user_id']);
+    $link = validate($_POST['link']);
 
     if(isset($_FILES['image']) && $_FILES['photo']['error'] == 0){
         $file_name = $_FILES['image']['name'];
@@ -167,8 +168,8 @@ if(isset($_POST['project'])){
 
         if(move_uploaded_file($file_temp, $folder)){
 
-            $projects =  "INSERT INTO project (user_id, title, description, photo)
-                VALUES('$user_id','$title','$description','$file_name')";
+            $projects =  "INSERT INTO project (user_id, title, description, photo, link)
+                VALUES('$user_id','$title','$description','$file_name','$link')";
             $result = mysqli_query($conn, $projects);
             if($result){
                 echo"<script>alert('Project Successfully Added'); window.location.href='../Portfolio_Dashboard/projectlist.php';</script>";
