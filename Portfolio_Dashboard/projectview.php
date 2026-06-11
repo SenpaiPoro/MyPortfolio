@@ -53,7 +53,7 @@
                                 </h2>
                                 <p class="text-dark-mode" style="color: #000;"><?php echo $project['description'];?></p>
                                 </div>
-                                <p><a class="link-opacity-50-hover" href="<?php echo $project['link']; ?>" target="_blank">View Project</a></p>
+                                <p><a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="<?php echo $project['link']; ?>" target="_blank">View Project Source Code</a></p>
                             </div>
 
                             <!-- Image -->
