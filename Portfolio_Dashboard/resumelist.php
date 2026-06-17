@@ -33,10 +33,7 @@
                 </thead>
                 <tbody class="table-hover">
                 <?php
-
                         $Data = Getdata("resume", $id);
-                    
-
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>
@@ -45,12 +42,12 @@
                                     <td> <?= htmlspecialchars($DataList['name']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['title']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['address']); ?></td>
-                                    <td> <?= htmlspecialchars($DataList['description']); ?></td>
+                                    <td> <p class="d-inline-block text-truncate" style="max-width: 170px;"> <?= htmlspecialchars($DataList['description']); ?></p></td>
                                     <td> <?= htmlspecialchars($DataList['year']); ?></td>
-                                    
                                 <td> 
                                 <a href="resume_edit.php?id=<?= $DataList['id'];?>   "class="btn btn-success btn-sm">Edit</a>
-                                <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
+                                <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
+                                 onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
                             </td>
                     </tr>
                             <?php
