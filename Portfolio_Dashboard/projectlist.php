@@ -28,7 +28,7 @@
                 <tbody class="table-hover">
                 <?php
 
-                        $Data = Getdata("project", $id );
+                        $Data = Getdata("project", $id, $target);
                     
 
                     if (mysqli_num_rows($Data) > 0) {
@@ -48,7 +48,7 @@
                             <?php
                         }
                     }
-                    else
+                    else    
                     {
                         ?>
                             <tr>

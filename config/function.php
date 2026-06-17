@@ -43,11 +43,17 @@ function checkId($paramType){
     }
 }
 
-function Getdata($table, $user_id){
+function Getdata($table, $user_id, $target){
     global $conn;
 
-    $sql = "SELECT * FROM $table where user_id = $user_id"; 
 
+    if ($target != null) {
+        $sql = "SELECT * FROM $table where user_id = $user_id AND title LIKE '%$target%'"; 
+        return mysqli_query($conn, $sql);
+
+    }
+
+    $sql = "SELECT * FROM $table where user_id = $user_id"; 
     return mysqli_query($conn, $sql);
 
 
@@ -102,5 +108,6 @@ function deleteQuery($table, $id){
     $result = mysqli_query($conn, $query);
     return $result;
 }
+
 
 ?>
