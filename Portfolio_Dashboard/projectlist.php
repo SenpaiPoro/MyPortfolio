@@ -28,7 +28,7 @@
                 <tbody class="table-hover">
                 <?php
 
-                        $Data = Getdata("project", $id, $target);
+                        $Data = Getdata("project", $id, "Education");
                     
 
                     if (mysqli_num_rows($Data) > 0) {

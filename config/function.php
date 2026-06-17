@@ -48,14 +48,14 @@ function Getdata($table, $user_id, $target){
 
 
     if ($target != null) {
-        $sql = "SELECT * FROM $table where user_id = $user_id AND title LIKE '%$target%'"; 
+        $sql = "SELECT * FROM $table where user_id = $user_id AND type = '$target'"; 
         return mysqli_query($conn, $sql);
 
+    }else
+    {
+        $sql = "SELECT * FROM $table where user_id = $user_id"; 
+        return mysqli_query($conn, $sql);
     }
-
-    $sql = "SELECT * FROM $table where user_id = $user_id"; 
-    return mysqli_query($conn, $sql);
-
 
 }
 
