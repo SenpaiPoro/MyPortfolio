@@ -43,9 +43,8 @@ function checkId($paramType){
     }
 }
 
-function Getdata($table, $user_id, $target){
+function Getdata($table, $user_id, $target = null){
     global $conn;
-
 
     if ($target != null) {
         $sql = "SELECT * FROM $table where user_id = $user_id AND type = '$target'"; 
@@ -56,7 +55,6 @@ function Getdata($table, $user_id, $target){
         $sql = "SELECT * FROM $table where user_id = $user_id"; 
         return mysqli_query($conn, $sql);
     }
-
 }
 
 function getbyId($tablename,$userid){
