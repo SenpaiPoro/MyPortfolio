@@ -56,14 +56,10 @@
                         <?php
                     }
                   ?>
-
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
 <script src="../admin/assets/js/script.js"></script>
-
-
 <?php include ('include/footer.php'); ?>
