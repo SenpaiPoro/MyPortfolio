@@ -88,6 +88,7 @@ $row = $result->fetch_assoc();
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item active" href="profile.php">Profile</a>
                         <a class="collapse-item" href="resumelist.php">Resume</a>
+                        <a class="collapse-item" href="skills.php">Skills</a>
                         <a class="collapse-item active" href="projectlist.php">Projects</a>
                         <a class="collapse-item" href="messages.php">Messages</a>
                     </div>
