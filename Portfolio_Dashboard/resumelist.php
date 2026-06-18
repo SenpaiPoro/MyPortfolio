@@ -14,8 +14,6 @@
         <div class="card-body">
         <?= alertMessage(); ?>
         <form method="GET" action="">
-            </form>
-            <form class="d-flex" role="search" method="GET">
             <div class="input-group input-group-sm mb-3">
 </div>
 </form>
@@ -38,7 +36,7 @@
                         foreach ($Data as $DataList) {
                 ?>
                               <tr>
-                                `    <td> <?= htmlspecialchars($DataList['type']); ?></td>
+                                   <td> <?= htmlspecialchars($DataList['type']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['name']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['title']); ?></td>
                                     <td> <?= htmlspecialchars($DataList['address']); ?></td>
