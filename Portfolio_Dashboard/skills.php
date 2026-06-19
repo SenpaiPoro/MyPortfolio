@@ -23,7 +23,7 @@
                         <button type="submit" name="add_skill" class="btn btn-primary">Add Skill</button>
                     </div>
                 </form>
-                 <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -32,7 +32,7 @@
                 </thead>
                 <tbody class="table-hover"></tbody>
                  <?php
-                        $Data = Getdata("resume", $id);
+                        $Data = Getdata("skills", $id);
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>
@@ -51,7 +51,7 @@
                         ?>
                             <tr>
                                 <td colspan="4">
-                                    No Record!
+                                    No Skills Record!
                                 </td>
                             </tr>
                         <?php
@@ -71,6 +71,42 @@
                         <button type="submit" name="add_language" class="btn btn-primary">Add Language</button>
                     </div>
                 </form>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover"></tbody>
+                 <?php
+                        $Data = Getdata("skills", $id);
+                    if (mysqli_num_rows($Data) > 0) {
+                        foreach ($Data as $DataList) {
+                ?>
+                              <tr>
+                                <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                <td> 
+                                <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
+                                 onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
+                            </td>
+                    </tr>
+                            <?php
+                        }
+                    }
+                    else
+                    {
+                        ?>
+                            <tr>
+                                <td colspan="4">
+                                    No Language Record!
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                  ?>
+                </tbody>
+            </table>
 </div>
 
 <?php include ('include/footer.php'); ?>
