@@ -12,10 +12,64 @@
         </div>
         <div class="card-body">
         <?= alertMessage(); ?>
-        
                 <form action="../config/code.php" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3"> 
+                        <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
+                        <label> Skill Name</label>
+                        <input type="text" name="skill_name" require class="form-control">
+                    </div>
+                    <div class="mb-3 text-end">
+                        <button type="submit" name="add_skill" class="btn btn-primary">Add Skill</button>
+                    </div>
+                </form>
+                 <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover"></tbody>
+                 <?php
+                        $Data = Getdata("resume", $id);
+                    if (mysqli_num_rows($Data) > 0) {
+                        foreach ($Data as $DataList) {
+                ?>
+                              <tr>
+                                <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                <td> 
+                                <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
+                                 onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
+                            </td>
+                    </tr>
+                            <?php
+                        }
+                    }
+                    else
+                    {
+                        ?>
+                            <tr>
+                                <td colspan="4">
+                                    No Record!
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                  ?>
+                </tbody>
+            </table>
 
 
+
+                <form action="../config/code.php" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3"> 
+                        <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
+                        <label> Programming Language Name</label>
+                        <input type="text" name="language_name" require class="form-control">
+                    </div>
+                    <div class="mb-3 text-end">
+                        <button type="submit" name="add_language" class="btn btn-primary">Add Language</button>
+                    </div>
                 </form>
 </div>
 
