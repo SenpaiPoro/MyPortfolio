@@ -255,4 +255,21 @@ if (isset($_POST['project_feature'])){
     }
 }
 
+
+if(isset($_POST['add_skill'])){
+    $user_id = validate($_POST['user_id']);
+    $skill_name = validate($_POST['skill_name']);
+    $type = validate($_POST['type']);
+
+    $insert_skill = "INSERT INTO skills (user_id, name, type) VALUES ('$user_id', '$skill_name', '$type')";
+    $result = mysqli_query($conn, $insert_skill);
+    if($result){
+        echo "<script>alert('Skill Added Successfully'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Something went wrong'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
+        exit;
+    }
+}
+
 ?>
