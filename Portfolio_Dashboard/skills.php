@@ -32,7 +32,7 @@
                 </thead>
                 <tbody class="table-hover"></tbody>
                  <?php
-                        $Data = Getdata("skills", $id);
+                        $Data = Getdata("skills", $id, 'SKILL');
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>
@@ -65,7 +65,7 @@
                         <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
                         <input type="hidden" name="type" require class="form-control" value="LANGUAGE">
                         <label> Programming Language Name</label>
-                        <input type="text" name="language_name" require class="form-control">
+                        <input type="text" name="skill_name" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
                         <button type="submit" name="add_skill" class="btn btn-primary">Add Language</button>
@@ -80,7 +80,7 @@
                 </thead>
                 <tbody class="table-hover"></tbody>
                  <?php
-                        $Data = Getdata("skills", $id);
+                        $Data = Getdata("skills", $id, 'LANGUAGE');
                     if (mysqli_num_rows($Data) > 0) {
                         foreach ($Data as $DataList) {
                 ?>

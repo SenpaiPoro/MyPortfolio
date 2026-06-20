@@ -261,7 +261,7 @@ if(isset($_POST['add_skill'])){
     $skill_name = validate($_POST['skill_name']);
     $type = validate($_POST['type']);
 
-    $insert_skill = "INSERT INTO skills (user_id, name, type) VALUES ('$user_id', '$skill_name', '$type')";
+    $insert_skill = "INSERT INTO skills (user_id, type, name) VALUES ('$user_id', '$type', '$skill_name')";
     $result = mysqli_query($conn, $insert_skill);
     if($result){
         echo "<script>alert('Skill Added Successfully'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
