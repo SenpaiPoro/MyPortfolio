@@ -68,7 +68,7 @@
                         <input type="text" name="language_name" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
-                        <button type="submit" name="add_language" class="btn btn-primary">Add Language</button>
+                        <button type="submit" name="add_skill" class="btn btn-primary">Add Language</button>
                     </div>
                 </form>
             <table class="table table-bordered table-striped table-hover">
