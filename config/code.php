@@ -257,12 +257,18 @@ if (isset($_POST['project_feature'])){
 
 
 if(isset($_POST['add_skill'])){
-    $user_id = validate($_POST['user_id']);
+    $user_id    = validate($_POST['user_id']);
     $skill_name = validate($_POST['skill_name']);
-    $type = validate($_POST['type']);
+    $type       = validate($_POST['type']);
 
-    $insert_skill = "INSERT INTO skills (user_id, type, name) VALUES ('$user_id', '$type', '$skill_name')";
+    // Force all letters to uppercase
+    $skill_name = strtoupper($skill_name); // "php developer" → "PHP DEVELOPER"
+    $type       = strtoupper($type);       // "frontend" → "FRONTEND"
+
+    $insert_skill = "INSERT INTO skills (user_id, type, name) 
+                     VALUES ('$user_id', '$type', '$skill_name')";
     $result = mysqli_query($conn, $insert_skill);
+
     if($result){
         echo "<script>alert('Skill Added Successfully'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
         exit;

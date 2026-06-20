@@ -37,7 +37,7 @@
                         foreach ($Data as $DataList) {
                 ?>
                               <tr>
-                                <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                <td><p style="color: #000;"> <?= htmlspecialchars($DataList['name']); ?></p></td>
                                 <td> 
                                 <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
                                  onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
@@ -85,7 +85,7 @@
                         foreach ($Data as $DataList) {
                 ?>
                               <tr>
-                                <td> <?= htmlspecialchars($DataList['name']); ?></td>
+                                <td><p style="color: #000;"> <?= htmlspecialchars($DataList['name']); ?></p></td>
                                 <td> 
                                 <a href="include/deleteresume.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm"
                                  onclick="return confirm('Are you Sure that you want to delete this Experience? ');">Delete</a>
