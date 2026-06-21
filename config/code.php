@@ -261,7 +261,6 @@ if(isset($_POST['add_skill'])){
     $skill_name = validate($_POST['skill_name']);
     $type       = validate($_POST['type']);
 
-
     if($skill_name == ''){
         echo "<script>alert('Please fill in the field'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
         exit;
