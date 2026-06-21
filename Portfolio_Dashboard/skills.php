@@ -16,7 +16,7 @@
                     <div class="mb-3"> 
                         <input type="hidden" name="user_id" require class="form-control" value="<?php echo $id;?>">
                         <input type="hidden" name="type" require class="form-control" value="SKILL">
-                        <label> Skill Name</label>
+                        <label>Professional Skill Name</label>
                         <input type="text" name="skill_name" require class="form-control">
                     </div>
                     <div class="mb-3 text-end">
