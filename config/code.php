@@ -261,20 +261,26 @@ if(isset($_POST['add_skill'])){
     $skill_name = validate($_POST['skill_name']);
     $type       = validate($_POST['type']);
 
-    // Force all letters to uppercase
-    $skill_name = strtoupper($skill_name); // "php developer" → "PHP DEVELOPER"
-    $type       = strtoupper($type);       // "frontend" → "FRONTEND"
 
-    $insert_skill = "INSERT INTO skills (user_id, type, name) 
-                     VALUES ('$user_id', '$type', '$skill_name')";
-    $result = mysqli_query($conn, $insert_skill);
+    if($skill_name == ''){
+        echo "<script>alert('Please fill in the field'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
+        exit;
+    }else{
+    // Force all letters to uppercase 
+        $skill_name = strtoupper($skill_name); // "php developer" → "PHP DEVELOPER"
+        $type       = strtoupper($type);       // "frontend" → "FRONTEND"
 
-    if($result){
-        echo "<script>alert('Skill Added Successfully'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
-        exit;
-    } else {
-        echo "<script>alert('Something went wrong'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
-        exit;
+        $insert_skill = "INSERT INTO skills (user_id, type, name) 
+                        VALUES ('$user_id', '$type', '$skill_name')";
+        $result = mysqli_query($conn, $insert_skill);
+
+        if($result){
+            echo "<script>alert('Skill Added Successfully'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
+            exit;
+        } else {
+            echo "<script>alert('Something went wrong'); window.location.href='../Portfolio_Dashboard/skills.php';</script>";
+            exit;
+        }
     }
 }
 
