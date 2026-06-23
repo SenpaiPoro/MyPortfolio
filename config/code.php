@@ -255,7 +255,6 @@ if (isset($_POST['project_feature'])){
     }
 }
 
-
 if(isset($_POST['add_skill'])){
     $user_id    = validate($_POST['user_id']);
     $skill_name = validate($_POST['skill_name']);
@@ -282,5 +281,4 @@ if(isset($_POST['add_skill'])){
         }
     }
 }
-
 ?>
