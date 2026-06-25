@@ -38,7 +38,7 @@
                                     <td> <?= htmlspecialchars($DataList['phone']); ?></td>
                                     
                                 <td> 
-                                <a href="include/deleteproject.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Project? ');">Delete</a>
+                                <a href="include/deletemessage.php?id=<?= $DataList['id'];?> "class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure that you want to delete this Project? ');">Delete</a>
                                 <a href="MessageView.php?id=<?= $DataList['id'];?>   "class="btn btn-info btn-sm">View Messages</a>
                             </td>
                     </tr>
