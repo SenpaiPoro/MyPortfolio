@@ -13,6 +13,8 @@ if(is_numeric($parameter_result))
         $usersDeleted = deleteQuery('project',$usersId);
         if($usersDeleted)
         {
+            $FeatureDeleted = "DELETE FROM project_img WHERE user_id = $usersId";
+            $query = mysqli_query($conn, $FeatureDeleted);
             redirect('../projectlist.php', 'Successfully Deleted');
                 }else{
                     redirect('../project.php', 'Someting went wrong');
