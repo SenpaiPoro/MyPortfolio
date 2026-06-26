@@ -49,9 +49,7 @@
                                 <?php echo $value['message']; ?>
                             </p>
 
-                            <small class="text-muted">
-                                Phone: <?php echo $value['phone']; ?>
-                            </small>
+                          
 
                         </div>
 
@@ -67,7 +65,9 @@
                         <small class="text-muted">
                             Message ID: <?php echo $value['id']; ?>
                         </small>
-
+                          <small style="margin-left: 20px; color: #000;">
+                                Phone: <?php echo $value['phone']; ?>
+                            </small>
                         <a href="messages.php" class="btn btn-sm btn-primary">
                             Back to Messages
                         </a>
